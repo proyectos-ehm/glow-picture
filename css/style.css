@@ -1,0 +1,348 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: url(../images/background.png);
+    background-size: cover;
+    background-position: top 0;
+    background-repeat: no-repeat;
+}
+
+.my-7 {
+    margin: 5rem 0 !important;
+}
+
+.row {
+    margin: 0;
+    width: 100%;
+}
+
+.container {
+    max-width: 90%;
+}
+
+h2 {
+    font-family: 'Roboto Condensed';
+    font-weight: 700;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+ul {
+    list-style: none;
+}
+
+/* HEADER */
+[data-icon="hamburguer-bar"] {
+    height: 3px;
+    width: 40px;
+    background: #9a27c9;
+    margin: 10px;
+    box-shadow: 0 2px 10px 0 rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+
+[data-icon="hamburguer"] [data-icon="hamburguer-bar"].bar-on:nth-of-type(1) {
+    animation-name: hamburguer-one-bar-one;
+    animation-duration: 0.7s;
+    transform: translate(0px, 13px) rotate(45deg);
+}
+
+[data-icon="hamburguer"] [data-icon="hamburguer-bar"].bar-on:nth-of-type(2) {
+    animation-name: hamburguer-one-bar-two;
+    animation-duration: 0.7s;
+    opacity: 0;
+}
+
+[data-icon="hamburguer"] [data-icon="hamburguer-bar"].bar-on:nth-of-type(3) {
+    animation-name: hamburguer-one-bar-three;
+    animation-duration: 0.7s;
+    transform: translate(0px, -13px) rotate(-45deg);
+}
+
+.navbar-light .navbar-toggler {
+    border-color: transparent;
+}
+
+@keyframes hamburguer-one-bar-one {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    50% {
+        transform: translate(0px, 12px);
+    }
+
+    100% {
+        transform: translate(0px, 12px) rotate(45deg);
+    }
+}
+
+@keyframes hamburguer-one-bar-two {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes hamburguer-one-bar-three {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    50% {
+        transform: translate(0px, -12px);
+    }
+
+    100% {
+        transform: translate(0px, -12px) rotate(-45deg);
+    }
+}
+
+
+.navbar {
+    padding: 50px 70px;
+}
+
+.navbar-brand img {
+    width: 350px;
+}
+
+.nav-link {
+    color: #fff !important;
+    font-family: 'Roboto Condensed';
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.navbar .redes img {
+    display: block;
+    width: 25px;
+    margin: 7px;
+}
+
+.home {
+    position: relative;
+}
+
+.home .humo {
+    position: absolute;
+    bottom: -100px;
+    width: 80%;
+    right: 0;
+    opacity: .5;
+}
+
+.book h2 {
+    text-align: center;
+}
+
+.book .humo {
+    position: absolute;
+    bottom: 200px;
+    width: 70%;
+    opacity: .6;
+}
+
+.paquetes .header img {
+    width: 60px;
+    display: inline-block;
+    margin: 0 3px;
+}
+
+.paquetes .header img.mascotas {
+    width: 60%;
+    display: inline-block;
+    margin: 0 3px;
+}
+
+.paquetes .line {
+    position: absolute;
+    right: -28px;
+    height: 120%;
+    top: -10%;
+    width: 56px;
+}
+
+.paquetes .triangulo {
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 1000px;
+}
+
+.carousel-control-prev-icon {
+    background-image: url(../images/Flecha_Derecha.png);
+    background-position: center;
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+}
+
+.carousel-control-next-icon {
+    background-image: url(../images/Flecha_Izquierda.png);
+    background-position: center;
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+}
+
+.carousel-control-next {
+    opacity: 1;
+}
+
+.carousel-control-prev {
+    opacity: 1;
+}
+
+.portafolio .header {
+    position: relative;
+    height: 250px;
+}
+
+.portafolio .header img {
+    position: absolute;
+    width: 220px;
+    top: 0;
+    right: 0;
+}
+
+.portafolio .header h2 {
+    font-size: 4rem;
+}
+
+footer img {
+    width: 350px;
+    display: block;
+    margin: 30px 0;
+}
+
+footer p {
+    font-family: 'Roboto Condensed';
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+@media (max-width:1199px) {
+    .paquetes .triangulo {
+        width: 900px;
+        z-index: -1;
+    }
+
+    .col-md-6 {
+        z-index: 1;
+    }
+
+    .portafolio .header img {
+        width: 180px;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .paquetes .triangulo {
+        width: 650px;
+        z-index: -1;
+    }
+
+    .paquetes .header img.mascotas {
+        width: 100%;
+    }
+
+    .paquetes .header img {
+        width: 50px;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+}
+
+@media(max-width:767px) {
+
+    .navbar {
+        padding: 50px 25px;
+    }
+
+    .navbar-brand img {
+        width: 150px;
+    }
+
+    .navbar ul li {
+        text-align: center;
+    }
+
+    .navbar .redes {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar .redes a {
+        width: 35px;
+
+    }
+
+    .home .humo {
+        bottom: -160px;
+        width: 250%;
+        left: -90px;
+        opacity: .3;
+    }
+
+    .book .humo {
+        top: 200px;
+        width: 190%;
+    }
+
+    .book .derecha,
+    .book .izquierda {
+        width: 200px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .portafolio .my-7 {
+        margin: 3rem 0 !important;
+    }
+
+    .portafolio .header {
+        position: relative;
+        height: auto;
+    }
+
+    .portafolio .header h2 {
+        font-size: 2rem;
+        margin-bottom: 0;
+    }
+
+    .portafolio .header img {
+        position: relative;
+        width: 100px;
+    }
+
+    .carousel-control-prev {
+        opacity: 1;
+        left: -50px;
+    }
+
+    .carousel-control-next {
+        opacity: 1;
+        right: -50px;
+    }
+
+    footer img {
+        width: 250px;
+    }
+}
