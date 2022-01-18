@@ -265,8 +265,8 @@ footer p {
         width: 50px;
     }
 
-    body {
-        overflow-x: hidden;
+    .box_humo {
+        overflow: hidden;
     }
 }
 
