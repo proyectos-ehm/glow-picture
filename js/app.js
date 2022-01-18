@@ -1,10 +1,4 @@
 
-    wow = new WOW({
-      mobile: false
-    })
-    new WOW().init();
-
-
 (function ($) {
     "use strict";
     $('[data-icon="hamburguer"]').on("click", function () {
