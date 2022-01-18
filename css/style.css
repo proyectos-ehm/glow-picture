@@ -295,10 +295,10 @@ footer p {
     }
 
     .home .humo {
-        bottom: -160px;
-        width: 250%;
-        left: -90px;
-        opacity: .3;
+        bottom: -90px;
+        width: 100%;
+        left: 0;
+        opacity: .5;
     }
 
     .book .humo {
